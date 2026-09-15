@@ -1,0 +1,65 @@
+# Citation metadata for this repository (Citation File Format 1.2.0).
+# Spec: https://citation-file-format.github.io/
+# Validate with: pipx run cffconvert --validate
+#
+# TODO this file is a stub. Before public release, every field marked TODO below
+# must be filled in and the whole file validated. Nothing here has been checked
+# against the paper.
+
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "IBL BrainWideBench"
+abstract: >-
+  TODO one-paragraph description of the benchmark: the three task suites, the
+  dataset it is built from, and what it measures. Keep it in sync with the
+  README opening and docs/source/index.rst.
+type: software
+license: MIT  # SPDX identifier, matches the LICENSE file
+repository-code: "https://github.com/brainbench-org/ibl-bwb"
+url: "TODO project or docs page"
+version: "0.1.0"  # keep in sync with pyproject.toml
+date-released: TODO  # YYYY-MM-DD
+keywords:
+  - neuroscience
+  - benchmark
+  - electrophysiology
+  - neural-decoding
+  - brain-wide-map
+
+# TODO replace this list with the paper's author list, in the paper's order.
+# The entry below is a placeholder so the file stays valid CFF; it is NOT an
+# author list. Git history is not an author list: it over-weights whoever ran
+# the merges and misses anyone who contributed without commits.
+#
+# For reference only, code contributors by commit volume as of 2026-08-31:
+#   Alexandre Andre, Vinam Arora, Shivashriganesh P. Mahato, Mehdi Azabou,
+#   Olivier Winter, Divyansh Lachi, Reid Laughton, Nanda H. Krishna,
+#   Matt Whiteway, Keshav Balaji
+# Names, spellings, affiliations and ORCIDs all need confirming with each person.
+# TODO replace with the paper's author list, in the paper's order, once confirmed.
+# Until then this is the collective holder from LICENSE, not an author list: an entity
+# entry keeps the file valid without naming anyone who has not confirmed.
+authors:
+  - name: "The IBL BrainWideBench authors"
+
+# TODO fill in once the paper is public, then delete this comment.
+# `preferred-citation` is what citation tooling surfaces instead of the software
+# entry, so this is the block that actually matters for the paper.
+preferred-citation:
+  type: conference-paper
+  title: "TODO paper title"
+  collection-title: "TODO proceedings title"
+  year: TODO
+  url: "TODO openreview or arXiv URL"
+  # doi: TODO
+  authors:
+    - family-names: TODO
+      given-names: TODO
+
+references:
+  # TODO the benchmark is built on the IBL Brain Wide Map. That dataset should be
+  # cited here as well. Pull the canonical entry rather than writing one by hand.
+  - type: data
+    title: "TODO IBL Brain Wide Map dataset citation"
+    authors:
+      - name: "International Brain Laboratory"

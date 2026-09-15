@@ -1,0 +1,48 @@
+{% if module == "torch_brain" -%}
+{%- set module_hook = "torch_brain" -%}
+{%- elif module.startswith("torch_brain.") -%}
+{%- set module_hook = module[12:] -%}
+{%- else -%}
+{%- set module_hook = None -%}
+{%- endif -%}
+
+{% if module_hook %}
+.. _{{ module_hook }}_ref:
+{% endif %}
+
+{% set title = module_info.get("title", module) -%}
+{{ title }}
+{{ "=" * title|length }}
+
+.. automodule:: {{ module }}
+
+{% if title != module %}
+.. currentmodule:: {{ title }}
+{% endif %}
+
+{% if module_info["description"] %}
+{{ module_info["description"] }}
+{% endif %}
+
+{% for section in module_info["sections"] %}
+{% if section["title"] and module_hook %}
+.. _{{ module_hook }}_ref-{{ section["title"]|lower|replace(" ", "-") }}:
+{% endif %}
+
+{% if section["title"] %}
+{{ section["title"] }}
+{{ "-" * section["title"]|length }}
+{% endif %}
+
+{% if section["description"] %}
+{{ section["description"] }}
+{% endif %}
+
+.. autosummary::
+  :nosignatures:
+  :toctree: autosummary/
+
+{% for obj in section["autosummary"] %}
+  {{ obj }}
+{%- endfor %}
+{% endfor %}
